@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SportApp</string>
     <string name="password_label">Password</string>
-    <string name="email_label">Email</string>
+    <string name="user_label">Usuario</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -13,4 +13,7 @@
     <string name="menu_home">Perfil demografico</string>
     <string name="menu_gallery">Perfil Deportivo</string>
     <string name="menu_slideshow">Perfil Alimenticio</string>
+    <string name="title_label">Ingresa a tu portal deportivo</string>
+    <string name="contrase_label">Contraseña</string>
+    <string name="login_label">Continuar</string>
 </resources>
