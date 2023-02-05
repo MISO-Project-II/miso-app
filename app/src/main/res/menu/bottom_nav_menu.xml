@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_general"
+        android:icon="@drawable/ic_resume"
+        android:title="@string/menu_general_data" />
+    <item
+        android:id="@+id/nav_sport"
+        android:icon="@drawable/ic_running"
+        android:title="@string/menu_sport_profile" />
+    <item
+        android:id="@+id/nav_food"
+        android:icon="@drawable/ic_food"
+        android:title="@string/menu_food_profile" />
+    <item
+        android:id="@+id/nav_demographic"
+        android:icon="@drawable/ic_location"
+        android:title="@string/menu_demographic_profile" />
+</menu>

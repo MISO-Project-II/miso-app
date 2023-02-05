@@ -10,10 +10,13 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Perfil demografico</string>
-    <string name="menu_gallery">Perfil Deportivo</string>
-    <string name="menu_slideshow">Perfil Alimenticio</string>
+    <string name="menu_profile">Perfil</string>
+    <string name="menu_general_data">Datos Generales</string>
+    <string name="menu_sport_profile">Perfil Deportivo</string>
+    <string name="menu_food_profile">Perfil Alimenticio</string>
+    <string name="menu_demographic_profile">Perfil Demografico</string>
     <string name="title_label">Ingresa a tu portal deportivo</string>
     <string name="contrase_label">Contraseña</string>
     <string name="login_label">Continuar</string>
+    <string name="plincipal_data_title">Datos Principales</string>
 </resources>
