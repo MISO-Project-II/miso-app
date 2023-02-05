@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView02"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TitlePracticSport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deportes que practica o interesa"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:background="@drawable/title_rounded"/>
+
+        <TextView
+            android:id="@+id/ciclismo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ciclismo"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:id="@+id/atletismo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Atletismo"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:id="@+id/TitleDisabilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incapacidades"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:background="@drawable/title_rounded"/>
+        <TextView
+            android:id="@+id/disabilities1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Ninguna"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+        <TextView
+            android:id="@+id/TitleInconvenience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Molestias"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:background="@drawable/title_rounded"/>
+        <TextView
+            android:id="@+id/inconvenience1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Ninguna"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/TitleHourspractice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas que practica"
+            android:textColor="@color/orange"
+            android:textSize="20sp"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:background="@drawable/title_rounded"/>
+        <TextView
+            android:id="@+id/hourspractice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="6 Horas X Seman"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

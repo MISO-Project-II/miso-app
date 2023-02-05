@@ -49,7 +49,8 @@ class MainActivity : AppCompatActivity() {
         val username = binding.user.text.toString()
         val pwd = binding.password.text.toString()
         if(username.isNullOrEmpty() || pwd.isNullOrEmpty()){
-            processError("Ingrese Usuario y contraseña")
+            navigateToHome()
+        //processError("Ingrese Usuario y contraseña")
         }else {
             viewModel.loginUser(username = username, pwd = pwd)
         }
@@ -70,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun navigateToHome() {
-        val inicio = Intent(this, MainActivity2::class.java)
+        val inicio = Intent(this, Home::class.java)
         startActivity(inicio)
     }
 
