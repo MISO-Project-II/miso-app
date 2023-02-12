@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_services"
+        android:icon="@drawable/ic_resume"
+        android:title="@string/servicios_label" />
+    <item
+        android:id="@+id/nav_sport"
+        android:icon="@drawable/ic_running"
+        android:title="@string/servicios_contratados_label" />
+</menu>
