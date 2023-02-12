@@ -1,4 +1,4 @@
-package com.example.sportapp.ui.service
+package com.example.sportapp.ui.services
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,13 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.sportapp.R
-import com.example.sportapp.databinding.FragmentProfileBinding
 import com.example.sportapp.databinding.FragmentServiceBinding
-import com.example.sportapp.ui.foodProfile.FoodProfileFragment
+import com.example.sportapp.ui.availableServices.AvailableServicesFragment
 import com.example.sportapp.ui.generalData.GeneralDataFragment
-import com.example.sportapp.ui.geoProfile.GeoProfileFragment
-import com.example.sportapp.ui.profile.ProfileViewModel
-import com.example.sportapp.ui.sportProfile.SportProfileFragment
+import com.example.sportapp.ui.userServices.UserServicesFragment
 
 class ServiceFragment : Fragment() {
 
@@ -25,16 +22,30 @@ class ServiceFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val profileViewModel =
-            ViewModelProvider(this).get(ProfileViewModel::class.java)
+        val servicesViewModel = ViewModelProvider(this).get(ServicesViewModel::class.java)
 
         _binding = FragmentServiceBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        /*val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+        loadFragment(AvailableServicesFragment())
+
+        binding.bottomNavigationServices.setOnItemSelectedListener { item ->
+            var fragment: Fragment
+            when (item.itemId) {
+                R.id.nav_services_available -> {
+                    fragment = AvailableServicesFragment()
+                    loadFragment(fragment)
+                    true
+                }
+                R.id.nav_services_user -> {
+                    fragment = UserServicesFragment()
+                    loadFragment(fragment)
+                    true
+                }
+                else -> false
+            }
+
+        }
 
         return root
     }
@@ -42,7 +53,7 @@ class ServiceFragment : Fragment() {
     private fun loadFragment(fragment: Fragment) {
         // load fragment
         childFragmentManager.beginTransaction()
-            .replace(R.id.container, fragment)
+            .replace(R.id.containerServices, fragment)
             .commit()
     }
 
