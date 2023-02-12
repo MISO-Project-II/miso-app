@@ -19,4 +19,9 @@
     <string name="contrase_label">Contraseña</string>
     <string name="login_label">Continuar</string>
     <string name="plincipal_data_title">Datos Principales</string>
+    <string name="menu_services">Servicios</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="servicios_label">Servicios</string>
+    <string name="servicios_contratados_label">Servicios contratados</string>
 </resources>
