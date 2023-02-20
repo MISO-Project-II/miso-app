@@ -1,0 +1,6 @@
+projectKey=sportapp
+serverUrl=http://35.238.40.110:9000
+serverVersion=9.7.0.61563
+dashboardUrl=http://35.238.40.110:9000/dashboard?id=sportapp
+ceTaskId=AYX-IIe-o8DFzg3IXq6m
+ceTaskUrl=http://35.238.40.110:9000/api/ce/task?id=AYX-IIe-o8DFzg3IXq6m

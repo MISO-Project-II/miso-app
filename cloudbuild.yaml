@@ -1,0 +1,16 @@
+steps:
+  - id: Sonar Analysis
+    name: 'gcr.io/cloud-builders/mvn'
+    entrypoint: bash
+    args:
+      - '-c'
+      - |
+        mvn clean verify sonar:sonar \
+          -Dmaven.test.skip=false \
+          -Dsonar.projectKey=sportApp \
+          -Dsonar.host.url=http://34.67.142.84:9001 \
+          -Dsonar.login=sqp_12b68c4c6692d9acc9842a7527e58ca56d2ce3a3 \
+          -Dsonar.qualitygate.wait=true
+  - id: Package Image
+    name: maven:3.8.5-openjdk-17
+    args: [ 'mvn', 'package','-Dmaven.test.skip=true' ]
