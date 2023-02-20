@@ -10,11 +10,15 @@
             android:title="@string/menu_profile" />
         <item
             android:id="@+id/nav_service"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_services_general"
             android:title="@string/menu_services" />
-        <!--<item-->
-<!--            android:id="@+id/nav_slideshow"-->
-<!--            android:icon="@drawable/ic_menu_slideshow"-->
-<!--            android:title="@string/menu_slideshow" />-->
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_events_general"
+            android:title="@string/menu_events" />
+        <item
+            android:id="@+id/nav_products"
+            android:icon="@drawable/ic_products_general"
+            android:title="@string/menu_products" />
     </group>
 </menu>

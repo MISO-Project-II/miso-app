@@ -10,14 +10,19 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
         <TextView
-            android:id="@+id/TitleGeo"
+            android:id="@+id/TitleServiceAvailable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Servicios Disponibles"
+            android:text="@string/servicios_label"
             android:textColor="@color/orange"
             android:textSize="20sp"
             android:layout_margin="16dp"
             android:padding="8dp"
             android:background="@drawable/title_rounded"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
     </LinearLayout>
 </ScrollView>

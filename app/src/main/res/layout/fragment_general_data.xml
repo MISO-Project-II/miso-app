@@ -37,7 +37,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="rob"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
@@ -49,17 +48,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Nombres"
+            android:text="@string/names_label"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"/>
 
-        <TextView
+        <EditText
             android:id="@+id/genName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="rob rob"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
@@ -71,17 +69,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Apellidos"
+            android:text="@string/last_name_label"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp" />
 
-        <TextView
+        <EditText
             android:id="@+id/genLastName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="example rob"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
@@ -93,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Tipo de identificacion"
+            android:text="@string/identification_type_label"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"/>
@@ -103,7 +100,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Cedula de ciudadania"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
@@ -115,30 +111,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Numero de identificacion"
+            android:text="@string/identification_number_label"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"/>
 
-        <TextView
+        <EditText
             android:id="@+id/genNumIden"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="12345678987"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/input_rounded"/>
 
-
         <TextView
             android:id="@+id/TitleSecondData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Datos Segundarios"
+            android:text="@string/secundary_tittle"
             android:textAlignment="center"
             android:textColor="@color/orange"
             android:textSize="20sp"
@@ -149,7 +143,7 @@
             android:id="@+id/genGenLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Genero"
+            android:text="@string/gender_label"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"/>
@@ -159,7 +153,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Masculino"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
@@ -171,39 +164,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Peso"
+            android:text="@string/weight_label"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"/>
 
-        <TextView
+        <EditText
             android:id="@+id/genWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="80 kilos"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/input_rounded"/>
-
-        <TextView
-            android:id="@+id/genAgeLabel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Edad"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:layout_marginStart="16dp"/>
-
-        <TextView
-            android:id="@+id/genAge"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="20 años"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
@@ -215,22 +185,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Altura"
+            android:text="@string/height_label"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"/>
 
-        <TextView
+        <EditText
             android:id="@+id/genHeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="175 cm"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="32dp"
             android:background="@drawable/input_rounded"/>
+
+        <TextView
+            android:id="@+id/genAgeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/age_label"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:id="@+id/genAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/input_rounded"/>
+
 
     </LinearLayout>
 </ScrollView>

@@ -1,24 +1,23 @@
-package com.example.sportapp.ui.availableServices
+package com.example.sportapp.ui.availableEvents
 
-import BaseResponse
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sportapp.databinding.FragmentAvailableServicesBinding
-import com.example.sportapp.models.AvailableServicesViewModel
-import com.example.sportapp.responses.ServiceResponse
+import com.example.sportapp.databinding.FragmentAvailableEventsBinding
+import com.example.sportapp.models.AvailableEventsViewModel
+import com.example.sportapp.responses.EventResponse
 
-class AvailableServicesFragment : Fragment() {
+class AvailableEventsFragment : Fragment() {
 
-    private var _binding: FragmentAvailableServicesBinding? = null
+    private var _binding: FragmentAvailableEventsBinding? = null
     private val binding get() = _binding!!
-    private val viewServiceModel by viewModels<AvailableServicesViewModel>()
-    private lateinit var customAdapterService: CustomAdapterService
+    private val viewEventModel by viewModels<AvailableEventsViewModel>()
+    private lateinit var customAdapterEvent: CustomAdapterEvent
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +25,8 @@ class AvailableServicesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        viewServiceModel.serviceResult.observe(viewLifecycleOwner) {
+
+        viewEventModel.eventResult.observe(viewLifecycleOwner) {
             when (it) {
                 is BaseResponse.Success -> {
                     processData(it.data)
@@ -41,22 +41,22 @@ class AvailableServicesFragment : Fragment() {
             }
         }
 
-        viewServiceModel.availableService()
+        viewEventModel.availableEvent()
 
-        _binding = FragmentAvailableServicesBinding.inflate(inflater, container, false)
+        _binding = FragmentAvailableEventsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
     }
 
-    fun processData(data: ServiceResponse?) {
+    fun processData(data: EventResponse?) {
         if (data?.success == true) {
-            val recyclerView: RecyclerView? = _binding?.recyclerView
+            val recyclerView: RecyclerView? = _binding?.recyclerViewEvent
             val llm = LinearLayoutManager(this.context)
             llm.orientation = LinearLayoutManager.VERTICAL
-            customAdapterService = CustomAdapterService(data.result)
+            customAdapterEvent = CustomAdapterEvent(data.result)
             recyclerView?.layoutManager = llm
-            recyclerView?.adapter = customAdapterService
+            recyclerView?.adapter = customAdapterEvent
         }
     }
 

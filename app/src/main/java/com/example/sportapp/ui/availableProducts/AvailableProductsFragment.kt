@@ -1,24 +1,26 @@
-package com.example.sportapp.ui.availableServices
+package com.example.sportapp.ui.availableProducts
 
-import BaseResponse
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sportapp.databinding.FragmentAvailableProductsBinding
 import com.example.sportapp.databinding.FragmentAvailableServicesBinding
-import com.example.sportapp.models.AvailableServicesViewModel
+import com.example.sportapp.models.AvailableProductsViewModel
+import com.example.sportapp.responses.ProductResponse
 import com.example.sportapp.responses.ServiceResponse
+import com.example.sportapp.ui.availableServices.CustomAdapterService
 
-class AvailableServicesFragment : Fragment() {
+class AvailableProductsFragment : Fragment() {
 
-    private var _binding: FragmentAvailableServicesBinding? = null
+    private var _binding: FragmentAvailableProductsBinding? = null
     private val binding get() = _binding!!
-    private val viewServiceModel by viewModels<AvailableServicesViewModel>()
-    private lateinit var customAdapterService: CustomAdapterService
+    private val viewProductModel by viewModels<AvailableProductsViewModel>()
+    private lateinit var customAdapterProduct: CustomAdapterProduct
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +28,7 @@ class AvailableServicesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        viewServiceModel.serviceResult.observe(viewLifecycleOwner) {
+        viewProductModel.productResult.observe(viewLifecycleOwner) {
             when (it) {
                 is BaseResponse.Success -> {
                     processData(it.data)
@@ -41,22 +43,22 @@ class AvailableServicesFragment : Fragment() {
             }
         }
 
-        viewServiceModel.availableService()
+        viewProductModel.availableProduct()
 
-        _binding = FragmentAvailableServicesBinding.inflate(inflater, container, false)
+        _binding = FragmentAvailableProductsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
     }
 
-    fun processData(data: ServiceResponse?) {
+    fun processData(data: ProductResponse?) {
         if (data?.success == true) {
-            val recyclerView: RecyclerView? = _binding?.recyclerView
+            val recyclerView: RecyclerView? = _binding?.recyclerViewProducts
             val llm = LinearLayoutManager(this.context)
             llm.orientation = LinearLayoutManager.VERTICAL
-            customAdapterService = CustomAdapterService(data.result)
+            customAdapterProduct = CustomAdapterProduct(data.result)
             recyclerView?.layoutManager = llm
-            recyclerView?.adapter = customAdapterService
+            recyclerView?.adapter = customAdapterProduct
         }
     }
 

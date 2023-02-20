@@ -26,41 +26,41 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val profileViewModel =
-            ViewModelProvider(this).get(ProfileViewModel::class.java)
-
+        var id = ""
+        arguments?.let {
+            id = it.getString("id")!!
+        }
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        /*val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }*/
+        val data = Bundle()
 
-        loadFragment(GeneralDataFragment())
+        data.putString("id",id)
+
+        loadFragment(GeneralDataFragment(),data)
 
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             var fragment: Fragment
             when (item.itemId) {
                 R.id.nav_general -> {
                     fragment = GeneralDataFragment()
-                    loadFragment(fragment)
+                    loadFragment(fragment,data)
                     true
                 }
                 R.id.nav_sport -> {
                     fragment = SportProfileFragment()
-                    loadFragment(fragment)
+                    loadFragment(fragment,data)
                     true
 
                 }
                 R.id.nav_food -> {
                     fragment = FoodProfileFragment()
-                    loadFragment(fragment)
+                    loadFragment(fragment,data)
                     true
                 }
                 R.id.nav_demographic -> {
                     fragment = GeoProfileFragment()
-                    loadFragment(fragment)
+                    loadFragment(fragment,data)
                     true
                 }
                 else -> false
@@ -71,8 +71,8 @@ class ProfileFragment : Fragment() {
         return root
     }
 
-    private fun loadFragment(fragment: Fragment) {
-        // load fragment
+    private fun loadFragment(fragment: Fragment,data:Bundle) {
+        fragment.setArguments(data)
         childFragmentManager.beginTransaction()
             .replace(R.id.container, fragment)
             .commit()
