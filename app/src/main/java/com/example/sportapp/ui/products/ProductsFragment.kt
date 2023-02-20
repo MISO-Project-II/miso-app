@@ -1,20 +1,19 @@
-package com.example.sportapp.ui.services
+package com.example.sportapp.ui.products
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.sportapp.R
-import com.example.sportapp.databinding.FragmentServiceBinding
-import com.example.sportapp.ui.availableServices.AvailableServicesFragment
-import com.example.sportapp.ui.userServices.CustomAdapterUserService
-import com.example.sportapp.ui.userServices.UserServicesFragment
+import com.example.sportapp.databinding.FragmentProductsBinding
+import com.example.sportapp.ui.availableProducts.AvailableProductsFragment
+import com.example.sportapp.ui.userProducts.UserProductsFragment
 
-class ServiceFragment : Fragment() {
 
-    private var _binding: FragmentServiceBinding? = null
+class ProductsFragment : Fragment() {
+
+    private var _binding: FragmentProductsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -29,21 +28,21 @@ class ServiceFragment : Fragment() {
         val data = Bundle()
 
         data.putString("id",id)
-        _binding = FragmentServiceBinding.inflate(inflater, container, false)
+        _binding = FragmentProductsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        loadFragment(AvailableServicesFragment(),data)
+        loadFragment(AvailableProductsFragment(),data)
 
-        binding.bottomNavigationServices.setOnItemSelectedListener { item ->
+        binding.bottomNavigationProducts.setOnItemSelectedListener { item ->
             var fragment: Fragment
             when (item.itemId) {
-                R.id.nav_services_available -> {
-                    fragment = AvailableServicesFragment()
+                R.id.nav_products_available -> {
+                    fragment = AvailableProductsFragment()
                     loadFragment(fragment,data)
                     true
                 }
-                R.id.nav_services_user -> {
-                    fragment = UserServicesFragment()
+                R.id.nav_products_user -> {
+                    fragment = UserProductsFragment()
                     loadFragment(fragment,data)
                     true
                 }
@@ -55,11 +54,10 @@ class ServiceFragment : Fragment() {
         return root
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    private fun loadFragment(fragment: Fragment, data:Bundle) {
+    private fun loadFragment(fragment: Fragment,data:Bundle) {
         fragment.setArguments(data)
         childFragmentManager.beginTransaction()
-            .replace(R.id.containerServices, fragment)
+            .replace(R.id.containerProducts, fragment)
             .commit()
     }
 

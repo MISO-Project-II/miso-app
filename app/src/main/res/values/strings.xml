@@ -22,6 +22,21 @@
     <string name="menu_services">Servicios</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="servicios_label">Servicios</string>
+    <string name="servicios_label">Servicios disponibles</string>
     <string name="servicios_contratados_label">Servicios contratados</string>
+    <string name="names_label">Nombres</string>
+    <string name="last_name_label">Apellidos</string>
+    <string name="identification_type_label">Tipo de identificacion</string>
+    <string name="identification_number_label">Numero de identificacion</string>
+    <string name="secundary_tittle">Datos Segundarios</string>
+    <string name="gender_label">Genero</string>
+    <string name="weight_label">Peso</string>
+    <string name="age_label">Edad</string>
+    <string name="height_label">Altura</string>
+    <string name="menu_events">Eventos</string>
+    <string name="menu_products">Productos</string>
+    <string name="available_events">Eventos disponibles</string>
+    <string name="logged_events">Eventos registrados</string>
+    <string name="products_available">Productos disponibles</string>
+    <string name="purchased_products">Productos adquiridos</string>
 </resources>
